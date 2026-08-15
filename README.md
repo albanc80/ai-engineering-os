@@ -1,4 +1,4 @@
-# AI Engineering Operating System v2.0
+# AI Engineering Operating System 
 
 A vendor-neutral, risk-calibrated engineering operating model with native runtime adapters for Claude Code and Codex.
 
