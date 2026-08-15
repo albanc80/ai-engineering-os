@@ -7,8 +7,11 @@ with it.
 ## Working rules
 - Edit `SKILL.md` first, then propagate to the runtime copies under
   `runtime/claude-code/.claude/skills/` and `runtime/codex/.agents/skills/`.
-  These three files are intentionally identical — a change to one without the
-  others is a defect.
+  Each runtime copy is the canonical file verbatim plus one trailing
+  `## <Runtime> Runtime Adapter` section. Changing the canonical body without
+  re-propagating is a defect; verify with
+  `diff SKILL.md runtime/codex/.agents/skills/ai-engineering-os/SKILL.md`
+  (the only difference should be the adapter section).
 - Keep top-level `agents/`, `rubrics/`, `templates/`, `hooks/` vendor-neutral.
   Runtime-specific syntax belongs under `runtime/<runtime>/`.
 - Bump `VERSION` for any change to the methodology or the runtime contract.
