@@ -1,0 +1,15 @@
+# AI Engineering Operating System
+
+For material engineering work, use the `ai-engineering-operating-system` skill from `.agents/skills/ai-engineering-os/`.
+
+## Operating Rules
+
+- Classify the request FAST, STANDARD, or ENTERPRISE before selecting process depth.
+- Ground implementation plans in repository evidence. Distinguish facts from inference.
+- For STANDARD and ENTERPRISE work, keep durable artifacts under `.ai-engineering/` unless the repository already has authoritative equivalents.
+- Plan first when the task is ambiguous, cross-cutting, or high-risk.
+- Use independent review: the same implementation context must not be the sole reviewer for STANDARD or ENTERPRISE work. Use a separate Codex thread/agent/worktree or a human reviewer.
+- Parallelize only tasks with independent file/contract boundaries; avoid concurrent edits to the same stateful surface.
+- ENTERPRISE work requires explicit human approval at architecture, security, and release gates.
+- Do not claim completion until acceptance criteria and tests/verification have objective evidence.
+- Preserve reversibility and a rollback path for production-affecting changes.

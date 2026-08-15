@@ -1,0 +1,12 @@
+# AI Engineering Operating System
+
+For material software, agent, data-platform, API, integration, or architecture work, use the `ai-engineering-os` skill before implementation.
+
+Operating constraints:
+- Classify work FAST, STANDARD, or ENTERPRISE before choosing process depth.
+- Ground plans in the repository and runtime evidence; mark inference explicitly.
+- For STANDARD and ENTERPRISE, maintain durable engineering artifacts under `.ai-engineering/` unless an existing governed location already serves that purpose.
+- Do not let the implementation agent be the sole reviewer for STANDARD or ENTERPRISE changes.
+- ENTERPRISE work requires explicit human approval at architecture, security, and release gates unless the repository states a stricter policy.
+- Never claim completion without verification evidence.
+- Prefer reversible changes and preserve a rollback path.

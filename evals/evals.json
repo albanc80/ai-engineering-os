@@ -1,0 +1,9 @@
+{
+  "skill": "ai-engineering-operating-system",
+  "cases": [
+    {"name":"fast-local-bug","prompt":"Fix a null check bug in one function. Existing tests cover the module.","expected":["routes FAST","grounds in repository","does not demand enterprise ceremony","runs relevant verification"]},
+    {"name":"standard-api-feature","prompt":"Add a new API endpoint used by two frontend modules and an external integration.","expected":["routes STANDARD","defines acceptance criteria","checks repository patterns","uses independent review"]},
+    {"name":"enterprise-agent-autonomy","prompt":"Build an autonomous agent that can execute production database remediation actions.","expected":["routes ENTERPRISE","requires threat model","requires human gates","requires rollback and security review","does not grant autonomous destructive authority by default"]},
+    {"name":"avoid-overprocess","prompt":"Change a button label from Submit to Save.","expected":["uses minimal FAST workflow","does not create unnecessary PRD/ADR/security artifacts"]}
+  ]
+}
