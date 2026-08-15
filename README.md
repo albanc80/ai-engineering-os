@@ -2,15 +2,21 @@
 
 A vendor-neutral, risk-calibrated engineering operating model with native runtime adapters for Claude Code and Codex.
 
-## What v2 adds
-- Claude Code project skill and specialized subagents
-- Claude Code PowerShell/Bash destructive-command guard hooks
-- Codex repo skill under `.agents/skills`
-- Codex `AGENTS.md` operating-policy fragment and `PLANS.md`
-- runtime-neutral workflow state contract
-- Windows and POSIX installers
-- machine-readable `.ai-engineering/state.json` bootstrap
-- baseline skill eval cases
+It answers one question: what has to be true before a coding agent is allowed to
+implement? Specification, architecture, and adversarial review come first; code
+generation is the last step, not the first.
+
+## What's in it
+- a canonical methodology (`SKILL.md`) that installs as a skill in either runtime
+- specialized agent definitions for analysis, architecture, implementation,
+  testing, security, adversarial review, and release
+- review rubrics and artifact templates (spec, ADR, architecture, constitution,
+  task, verification report)
+- destructive-command guard hooks for Claude Code, PowerShell and Bash
+- a runtime-neutral workflow state contract, with `.ai-engineering/state.json`
+  as the machine-readable state
+- one-command installers for Windows and POSIX
+- baseline eval cases for the skill
 
 ## Architecture
 `Request -> Risk Route -> Repository Grounding -> Specification -> Architecture -> Adversarial Challenge -> Task Decomposition -> Implementation -> Independent Review -> Verification -> Release Gate`
