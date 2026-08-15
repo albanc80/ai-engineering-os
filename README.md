@@ -57,15 +57,55 @@ independent-review gates all trace back to it. Thank you for putting the idea
 into words, and for the reminder that the coding agent is the execution runtime,
 not the architecture, security, or evaluation authority.
 
-**Where this repository diverges.** Her post chains several separate tools, and
-those tools overlap heavily — each ships its own planning step, its own
-specification format, and its own review pass, so running them in sequence means
-doing the same work three or four times under different names. This repository
-takes the opposite approach: one pass over that stack, keeping only the piece
-each tool does best, and dropping every duplicate stage. The result is a single
-non-repetitive workflow with one specification format, one artifact location
-(`.ai-engineering/`), and one set of gates — usable as-is rather than assembled
-from overlapping parts.
+### Where this repository diverges
+
+Her post chains several frameworks in sequence. Stacked as-is they overlap —
+each ships its own planning step, specification format, and review pass, so
+running them end to end repeats the same work under different names.
+
+This repository is a synthesis instead: one reusable skill that takes the single
+thing each framework does best and drops the duplicated stages.
+
+| Source | What is kept |
+|---|---|
+| BMAD | problem framing and product architecture |
+| Spec Kit | specifications and the engineering constitution |
+| GSD | context management and decomposition |
+| gstack | independent / adversarial engineering review |
+| Superpowers | TDD and disciplined implementation |
+| Claude Code / Codex | execution runtime |
+
+On top of that layer: risk-based workflow routing, repository grounding, quality
+gates, specialized agents, and explicit human approval boundaries.
+
+The methodology is deliberately not tied to one vendor. It targets any
+Agent-Skills-compatible environment — Claude Code, Codex, and others — since
+Claude Skills follow the open [Agent Skills standard](https://docs.anthropic.com/en/docs/claude-code/skills),
+with some proprietary extensions on top.
+
+### The enforced principle
+
+No agent gets permission to implement until it can answer:
+
+```
+WHAT are we solving?
+WHY does it matter?
+WHAT are the acceptance criteria?
+WHAT constraints apply?
+WHAT already exists?
+HOW will we implement it?
+HOW will we prove it works?
+WHAT can go wrong?
+```
+
+Only then:
+
+```
+→ CODE
+```
+
+This keeps the useful idea behind the original workflow while avoiding the
+framework-stacking problem.
 
 Any errors or opinions in this repository are its author's, not hers.
 
