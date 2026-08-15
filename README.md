@@ -44,5 +44,20 @@ python scripts/bootstrap-state.py /path/to/repo
 ## Governance
 The coding agent is an execution runtime, not the sole product, architecture, security, or evaluation authority. STANDARD and ENTERPRISE changes require independent review. ENTERPRISE work defaults to human architecture, security, and release gates.
 
+## Acknowledgments
+This project was inspired by **Maryam Miradi, PhD** and her post
+[*How to Use Claude Code Like a Senior AI Engineer*](https://www.linkedin.com/posts/maryammiradi_how-to-use-claude-code-like-a-senior-activity-7493382359824875520-1gxU),
+which argues that "coding is the last step, not the first" and lays out a
+specification-driven workflow — requirements, principles, tool research,
+architecture review, and adversarial challenge — before any code is generated.
+
+That framing is the seed of this operating model: the risk route, the
+repository-grounding and specification stages, and the adversarial-challenge and
+independent-review gates all trace back to it. Thank you for putting the idea
+into words, and for the reminder that the coding agent is the execution runtime,
+not the architecture, security, or evaluation authority.
+
+Any errors or opinions in this repository are its author's, not hers.
+
 ## License
 Apache-2.0. See [LICENSE](LICENSE).
