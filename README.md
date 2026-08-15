@@ -57,6 +57,16 @@ independent-review gates all trace back to it. Thank you for putting the idea
 into words, and for the reminder that the coding agent is the execution runtime,
 not the architecture, security, or evaluation authority.
 
+**Where this repository diverges.** Her post chains several separate tools, and
+those tools overlap heavily — each ships its own planning step, its own
+specification format, and its own review pass, so running them in sequence means
+doing the same work three or four times under different names. This repository
+takes the opposite approach: one pass over that stack, keeping only the piece
+each tool does best, and dropping every duplicate stage. The result is a single
+non-repetitive workflow with one specification format, one artifact location
+(`.ai-engineering/`), and one set of gates — usable as-is rather than assembled
+from overlapping parts.
+
 Any errors or opinions in this repository are its author's, not hers.
 
 ## License
